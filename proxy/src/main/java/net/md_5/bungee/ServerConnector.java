@@ -256,10 +256,7 @@ public class ServerConnector extends PacketHandler
             user.setDimension( login.getDimension() );
         } else
         {
-            if ( user.getServer() != null ) //BotFilter
-            {
-                user.getServer().setObsolete( true ); //BotFilter
-            }
+            user.getServer().setObsolete( true ); //BotFilter
             user.getTabListHandler().onServerChange();
 
             Scoreboard serverScoreboard = user.getServerSentScoreboard();
