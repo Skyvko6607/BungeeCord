@@ -152,7 +152,6 @@ public class PacketUtils
     {
         ByteBuf brand = ByteBufAllocator.DEFAULT.heapBuffer();
         DefinedPacket.writeString( "BotFilter", brand );
-//        DefinedPacket packet = new PluginMessage( "MC|Brand", DefinedPacket.toArray( brand ), false );
         DefinedPacket packet = new PluginMessage( "minecraft:brand", DefinedPacket.toArray( brand ), false );
         brand.release();
         return packet;
